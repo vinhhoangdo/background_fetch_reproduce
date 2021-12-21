@@ -91,7 +91,6 @@ class _MyAppState extends State<MyApp> {
     try {
       var status = await BackgroundFetch.configure(BackgroundFetchConfig(
         minimumFetchInterval: 15,
-        /*
         forceAlarmManager: false,
         stopOnTerminate: false,
         startOnBoot: true,
@@ -101,7 +100,6 @@ class _MyAppState extends State<MyApp> {
         requiresStorageNotLow: false,
         requiresDeviceIdle: false,
         requiredNetworkType: NetworkType.NONE,
-         */
       ), _onBackgroundFetch, _onBackgroundFetchTimeout);
       print('[BackgroundFetch] configure success: $status');
       setState(() {
